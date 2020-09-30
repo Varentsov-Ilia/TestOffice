@@ -2,13 +2,20 @@ package com.company;
 
 public class Combine implements Device {
 
-    void LaserPrinting (){
+    void laserPrinting() {
         System.out.println("Идет лазерная печать");
     }
-    void Scan () {
+
+    void scan() {
         System.out.println("Идет сканирование");
     }
-    void Copy () {
+
+    void copy() {
         System.out.println("Идет копирование");
+    }
+
+    @Override
+    public String getName() {
+        return "Комбайн";
     }
 }

@@ -1,10 +1,14 @@
 package com.company;
 
 public interface Device {
-   default void TurnOn (){
-       System.out.println("Включено");
+
+    default void turnOn() {
+        System.out.println("Включено");
     }
-    default void TurnOff (){
+
+    default void turnOff() {
         System.out.println("Выключено");
     }
+
+    String getName();
 }
