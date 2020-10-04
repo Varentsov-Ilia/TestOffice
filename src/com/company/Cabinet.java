@@ -5,14 +5,22 @@ import java.util.List;
 
 public class Cabinet {
 
-    final int number;
+    private final int number;
 
-    List<Employee> employees = new ArrayList<>();
+    private List<Employee> employees = new ArrayList<>();
 
     Device device;
 
     public Cabinet(int number) {
         this.number = number;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public List<Employee> getEmployees() {
+        return  employees;
     }
 
     public void addEmployee(Employee employee) {

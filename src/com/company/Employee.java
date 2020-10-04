@@ -2,10 +2,14 @@ package com.company;
 
 public class Employee {
 
-    String name;
+    private String name;
 
-    public Employee(String name) {
+    Employee(String name) {
         this.name = name;
     }
+    public String getName() {
+        return name;
+    }
+
 
 }

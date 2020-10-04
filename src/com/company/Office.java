@@ -5,15 +5,19 @@ import java.util.List;
 
 public class Office {
 
-    List<Cabinet> cabinets = new ArrayList<>();
+     private List<Cabinet> cabinets = new ArrayList<>();
 
-    public void addCabinet(Cabinet cabinet) {
+    void addCabinet(Cabinet cabinet) {
         cabinets.add(cabinet);
+    }
+
+    public List<Cabinet> getCabinets() {
+        return  cabinets;
     }
 
     Cabinet getCabinet(int numberCab) {
         for (Cabinet cabinet : cabinets) {
-            if (cabinet.number == numberCab) {
+            if (cabinet.getNumber() == numberCab) {
                 return cabinet;
             }
         }
@@ -22,7 +26,7 @@ public class Office {
 
     void printCabinetsAndDevices() {
         for (Cabinet cabinet : cabinets) {
-            String cab = "Кабинет № " + cabinet.number;
+            String cab = "Кабинет № " + cabinet.getNumber();
             if (cabinet.device != null) {
                 cab = cab + " (" + cabinet.device.getName() + ")";
             }
@@ -32,8 +36,8 @@ public class Office {
 
     void printEmployeesAndCabinets() {
         for (Cabinet cabinet : cabinets) {
-            for (Employee employee : cabinet.employees) {
-                System.out.println("Сотрудник " + employee.name + " работает в кабинете № " + cabinet.number);
+            for (Employee employee : cabinet.getEmployees()) {
+                System.out.println("Сотрудник " + employee.getName() + " работает в кабинете № " + cabinet.getNumber());
             }
         }
 

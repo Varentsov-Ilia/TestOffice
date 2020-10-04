@@ -1,10 +1,6 @@
 package com.company;
 
-public class Scaner implements Device {
-
-    void scan (){
-        System.out.println("Идет сканирование");
-    }
+public class Scaner implements Device, CanScan {
 
     @Override
     public String getName() {
